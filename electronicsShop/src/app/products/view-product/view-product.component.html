@@ -1,0 +1,27 @@
+<div class="row justify-content-center mt-5">
+    <div class="col-md-6 mt-3 mb-3" >
+        <div class="card">
+            <div class="row">
+            <div class="col-md-6">
+            <img src="{{product.image}}" alt="" height="350" class="card-img-top">
+
+            </div>
+            <div class="col-md-6 bg-light">
+                <div class="card-body">
+                    <strong>Product: {{product.productName|uppercase}}</strong>
+                    <br><br>
+                    <strong>Description :</strong><p>{{product.productDescription}}</p>
+                    <h5>Price : {{product.productPrice|currency:'INR'}}</h5>
+                    <select name="pQuantity" [(ngModel)]="pQuantity" class="form-control">
+                        <option  value="1" id="opt">1</option>
+                        <option value="2" id="opt">2</option>
+                        <option value="3" id="opt">3</option>
+                        <option value="4" id="opt">4</option>
+                        <option value="5" id="opt">5</option>
+                    </select>       
+                    <button class="btn btn-primary mt-3" (click)="addtocart(product,pQuantity)">Add to Cart</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>

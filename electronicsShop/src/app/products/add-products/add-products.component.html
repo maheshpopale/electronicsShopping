@@ -1,0 +1,40 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <h4 class="text-primary text-center">New Product</h4>
+            <form [formGroup]="productform" (ngSubmit)="addProduct()">
+                <div class="form-group">
+                    <label for="productname">Product Name</label>
+                    <input type="text" formControlName="productName" id="productName" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="category">Product Category</label>
+                        <select formControlName="productCategory" class="form-control">
+                            <option *ngFor="let category of categories" value={{category.id}} >{{category.name}}</option>
+                        </select>
+                        <span *ngIf="productform.get('productCategory').touched && productform.get('productCategory').hasError('required')">Please Select Category</span>
+                </div>
+                <div class="form-group">
+                    <label for="productquantity">Product Quantity</label>
+                    <input type="text" formControlName="productQuantity" id="productQuantity" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="productprice">Product Price</label>
+                    <input type="text" formControlName="productPrice" id="productPrice" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="productdescription">Description</label>
+                    <textarea formControlName="productDescription" id="" cols="30" rows="5" class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="productimage">Image</label>
+                    <input type="file" name="Image" accept="image/*" (change)="handleImageFile($event)" formControlName="image" class="form-control">
+                </div>
+                <div class="image-preview" *ngIf="imagePreview!==' ' && imagePreview">
+                    <img [src]="imagePreview" [alt]=productform.value.productName >
+                </div>
+                <button class="btn btn-primary btn-block">New Product</button>
+            </form>
+        </div>
+    </div>
+</div>

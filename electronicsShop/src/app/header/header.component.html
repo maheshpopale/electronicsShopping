@@ -1,0 +1,35 @@
+<nav  class="navbar navbar-expand-md navbar-light" style="background-color: black;">
+    <a href="#" class="navbar-brand text-white">
+        <strong>Electronics Shop</strong>
+    </a>
+    <button class="navbar-toggler" id="icon" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a routerLink="/addproduct" class="nav-link active" id="alist">Home</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="/products" class="nav-link" id="alist">Products</a>
+            </li>
+
+            <li class="nav-item">
+                <a routerLink="/about" class="nav-link" id="alist">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="/signin" class="nav-link" id="alist">SignIn</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="/signup" class="nav-link" id="alist">SignUp</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="/cart" class="nav-link" id="alist"><i class="fas fa-shopping-cart fa-lg " style="color: white;"><i class="badge" style="background-color:#fc2779">{{totalItems}}</i></i> </a>
+            </li>
+            
+        </ul>
+    </div>
+</nav>

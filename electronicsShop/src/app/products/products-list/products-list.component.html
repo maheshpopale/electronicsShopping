@@ -1,0 +1,17 @@
+<div class="container mt-3">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-3 mt-3 mb-3" *ngFor="let product of products">
+            <div class="card" style="height: 420px;">
+                <img src="{{product.image}}" alt="" height="240" class="card-img-top">
+                <div class="card-body">
+                    <strong>Product: {{product.productName|uppercase}}</strong>
+                    <br><br>
+                    <h5>Price : {{product.productPrice|currency:'INR'}}</h5>
+                </div>
+                <div class="card-footer">
+                    <button id="viewbtn"v class="btn btn-primary stretched-link" routerLink="/viewproduct/{{product.id}}">View</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

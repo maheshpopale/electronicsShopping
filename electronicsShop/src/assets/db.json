@@ -1,0 +1,74 @@
+{
+    "users":[
+        {
+            "Id":1,
+            "firstName":"Ravi",
+            "lastName":"Shashri",
+            "email":"ravi@gmail.com",
+            "gender":"Male",
+            "mobile":9987867567,
+            "address":"Delhi",
+            "password":"Ravi@123"
+        },
+        {
+            "Id":2,
+            "firstName":"Komal",
+            "lastName":"Jadhav",
+            "email":"komaljadhav@gmail.com",
+            "gender":"Female",
+            "mobile":9987867567,
+            "address":"Nagar",
+            "password":"KomalJ@123"
+        },
+        {
+            "Id":3,
+            "firstName":"Satish",
+            "lastName":"Patil",
+            "email":"satish@gmail.com",
+            "gender":"Male",
+            "mobile":9987867567,
+            "address":"Pune",
+            "password":"satish@123"
+        }
+        
+    ],
+    "products":[
+        {
+            "Id":1,
+            "productName":"Product1",
+            "productCategory":"TV",
+            "ProductQuantity":20,
+            "ProductPrice":300,
+            "productDescription":"Product 1 is available here",
+            "productImage":"http://localhost:4200/assets/LCD_Television.jpg"
+        },
+        {
+            "Id":2,
+            "productName":"Product2",
+            "productCategory":"TV",
+            "ProductQuantity":15,
+            "ProductPrice":350,
+            "productDescription":"Product 2 is available here",
+            "productImage":"http://localhost:4200/assets/LCD1.jpg"
+        },
+        {
+            "Id":3,
+            "productName":"LG 260 L2",
+            "productCategory":"Refrigerators",
+            "ProductQuantity":24,
+            "ProductPrice":450,
+            "productDescription":"Product 2 is available here",
+            "productImage":"http://localhost:4200/assets/LG_260_L2.jpg"
+        },
+        {
+            "Id":4,
+            "productName":"Whirpool Refrigerator",
+            "productCategory":"Refrigerators",
+            "ProductQuantity":24,
+            "ProductPrice":15400,
+            "productDescription":"whirpool refrigerator is available here",
+            "productImage":"http://localhost:4200/assets/whirpool_refrigerator.jpg"
+        }
+        
+    ]
+}

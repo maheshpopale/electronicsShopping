@@ -1,0 +1,52 @@
+<div class="container mt-5">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-4 mt-2">
+            <h3 class="text-primary text-center">Sign Up Form</h3>
+            <form [formGroup]="signupform" (ngSubmit)="postData()">
+                <div class="form-group">
+                    <label for="firstName">FirstName</label>
+                    <input type="text" formControlName="firstName" id="firstName" class="form-control">
+                    <span *ngIf="signupform.get('firstName').touched && signupform.get('firstName').hasError('required')">Enter First Name</span>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">LastName</label>
+                    <input type="text" formControlName="lastName" id="lastName" class="form-control">
+                    <span *ngIf="signupform.get('lastName').touched && signupform.get('lastName').hasError('required')">Enter Last Name</span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" formControlName="emailAdd" id="emailAdd" class="form-control">
+                    <span *ngIf="signupform.get('emailAdd').touched && signupform.get('emailAdd').hasError('required')">Enter Your Email</span>
+                    <span *ngIf="signupform.get('emailAdd').touched && signupform.get('emailAdd').hasError('email')">Please Enter Valid Email Address</span>
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select formControlName="gender" id="gender" class="form-control">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="Mobile">Mobile No</label>
+                    <input type="text" formControlName="mobileNo" id="mobile" class="form-control">
+                    <span *ngIf="signupform.get('mobileNo').touched && signupform.get('mobileNo').hasError('required')">Enter Your Mobile Number</span>
+                    <span *ngIf="signupform.get('mobileNo').touched && signupform.get('mobileNo').hasError('minlength')">Please Enter 10 Digits Number</span>
+                    <span *ngIf="signupform.get('mobileNo').touched && signupform.get('mobileNo').hasError('maxlength')">Please Enter 10 Digits Number</span>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <textarea formControlName="address" id="address" cols="30" rows="5" class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" formControlName="password" id="password" class="form-control">
+                    <span *ngIf="signupform.get('password').touched && signupform.get('password').hasError('required')">Please Enter the Password</span>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block mb-2" >Sign Up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+</div>
